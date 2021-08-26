@@ -8,7 +8,8 @@ interface TriviaService {
 
     @GET("/api.php")
     suspend fun getTrivia(
-        @Query("amount") amount: Int
+        @Query("amount") amount: Int,
+        @Query("difficult") difficulty: String
     ): Response<TriviaResponse>
 
 }
